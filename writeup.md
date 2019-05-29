@@ -17,11 +17,12 @@ The goals / steps of this project are the following:
 
 [//]: # (Image References)
 
-[image1]: ./German_traffic_sign/sign1.png "Visualization"
-[image2]: ./German_traffic_sign/sign2.png "Grayscaling"
-[image3]: ./German_traffic_sign/sign3.png "Random Noise"
-[image4]: ./German_traffic_sign/sign4.png "Traffic Sign 1"
-[image5]: ./German_traffic_sign/sign5.png "Traffic Sign 2"
+[image1]: ./German_traffic_sign/sign1.png "Keep left"
+[image2]: ./German_traffic_sign/sign2.png "Dangerous curve left"
+[image3]: ./German_traffic_sign/sign3.png "No entry"
+[image4]: ./German_traffic_sign/sign4.png "Children crossing"
+[image5]: ./German_traffic_sign/sign5.png "Speed limit 20 kph"
+[image6]: hist.png
 
 
 ## Rubric Points
@@ -41,12 +42,15 @@ signs data set:
 * The shape of a traffic sign image is (32, 32, 3)
 * The number of unique classes/labels in the data set is 43
 
+![][image6]
+
+The x-axis shows the label on the traffic signs; the y-axis shows the number of occurance.
 
 ### Design and Test a Model Architecture
 
 #### 1. Describe how you preprocessed the image data. What techniques were chosen and why did you choose these techniques? Consider including images showing the output of each preprocessing technique. Pre-processing refers to techniques such as converting to grayscale, normalization, etc. (OPTIONAL: As described in the "Stand Out Suggestions" part of the rubric, if you generated additional data for training, describe why you decided to generate additional data, how you generated the data, and provide example images of the additional data. Then describe the characteristics of the augmented training set like number of images in the set, number of images for each class, etc.)
 
-The images are normalized in the following way:
+The images are normalized in the following way. The normalization ensures that the pixel values are between 0 and 1:
 - X_train = ((X_train - 127.5) / 127.5)
 - X_valid = ((X_valid - 127.5) / 127.5)
 - X_test = ((X_test - 127.5) / 127.5)
@@ -91,8 +95,7 @@ My final model results were:
 
 Here are five German traffic signs that I found on the web:
 
-![alt text][image1] ![alt text][image2] ![alt text][image3] 
-![alt text][image4] ![][image5]
+![][image1] ![][image2] ![][image3] ![][image4] ![][image5]
 
 
 #### 2. Discuss the model's predictions on these new traffic signs and compare the results to predicting on the test set. At a minimum, discuss what the predictions were, the accuracy on these new predictions, and compare the accuracy to the accuracy on the test set (OPTIONAL: Discuss the results in more detail as described in the "Stand Out Suggestions" part of the rubric).

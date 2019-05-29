@@ -80,10 +80,10 @@ My final model consisted of the following layers:
 #### 3. Describe how you trained your model. The discussion can include the type of optimizer, the batch size, number of epochs and any hyperparameters such as learning rate.
 
 To train the model, I used:
-- epoch = 25
+- epoch = 25. I used 10 epoches initially but the accuracy stuck at around 80%. Thus I used 25 epoches to increase model accuracy.
 - batch size = 200
-- optimizer = tf.train.AdamOptimizer
-- learn rate = 0.002
+- optimizer = tf.train.AdamOptimizer. Using adam optimizer allows straight forward implementation and efficient computation. Yet adam optimizer is not as geneneralized as SGD.
+- learn rate = 0.002. I lowered the learn rate (compared to the tenserflow lab) to improve optimization.
 
 #### 4. Describe the approach taken for finding a solution and getting the validation set accuracy to be at least 0.93. Include in the discussion the results on the training, validation and test sets and where in the code these were calculated. Your approach may have been an iterative process, in which case, outline the steps you took to get to the final solution and why you chose those steps. Perhaps your solution involved an already well known implementation or architecture. In this case, discuss why you think the architecture is suitable for the current problem.
 
@@ -102,16 +102,16 @@ Here are five German traffic signs that I found on the web:
 
 Here are the results of the prediction:
 
-| Image			        |     Prediction Correct     					| 
+| Image			        |     Prediction     					| 
 |:---------------------:|:---------------------------------------------:| 
-| 20km/h         		| N   									| 
-| No entry     			| Y 										|
-| Child crossing		| Y											|
-| Keep left 	   		| B					 				|
-| Curve left			| N      							|
+| 20km/h (label 0)         		| 35   									| 
+| No entry (label 17)    			| 17 										|
+| Child crossing (label 28)		| 25											|
+| Keep left (label 39) 	   		| 39					 				|
+| Curve left (label 19)			| 28      							|
 
 
-The model was able to correctly guess 3 of the 5 traffic signs, which gives an accuracy of 60%.
+The model was able to correctly guess 2 of the 5 traffic signs, which gives an accuracy of 40%. The accuracy is lower than expected. The reason of the mis-prediction could result from extra lines in the background and the low quality of my pictures downloded from the web.
 
 
 

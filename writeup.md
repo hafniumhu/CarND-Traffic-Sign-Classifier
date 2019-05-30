@@ -116,6 +116,11 @@ Here are the results of the prediction:
 
 The model was able to correctly guess 2 of the 5 traffic signs, which gives an accuracy of 40%. The accuracy is lower than expected. The reason of the mis-prediction could result from extra lines in the background and the low quality of my pictures downloded from the web. Particularly, the "children crossing" image appears to be blurred.
 
-
+Top five softmax:
+- 20km/h (label 0) has predictions: [1 5 0 2 4]; the according probabilities are: [  9.91248131e-01   8.70538969e-03   3.93916853e-05   6.09247854e-06   7.17794990e-07]
+- No entry (label 17) has predictions: [17 0 12 29 4]; the according probabilities are: [  9.98516381e-01   1.19396532e-03   1.83336044e-04   4.24175560e-05   3.21090265e-05]
+- Children crossing (label 28) has predictions: [25 31 21 30 26]; the according probabilities are: [  9.99511719e-01   4.52846230e-04   3.53927499e-05   2.94016598e-08   2.20060450e-08]
+- Keep left (label 39): [39 33 13 35 5]; the according probabilities are: [  9.99958396e-01   3.09650932e-05   8.80030711e-06   1.65821587e-06   9.77689325e-08]
+- Curve left (label 19): [28 29 23 30 20]; the according probabilities are: [  9.97260690e-01   2.46191840e-03   2.74204416e-04   2.47562934e-06   2.71457964e-07]
 
 

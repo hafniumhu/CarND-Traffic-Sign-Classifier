@@ -99,8 +99,7 @@ Here are five German traffic signs that I found on the web:
 
 ![][image1] ![][image2] ![][image3] ![][image4] ![][image5]
 
-
-
+The images are of 32x32 pixels in dimension. They have relatively good quality, except that in the second image there are a lot of edges in the background. The edges might affect my CNN to recognize the sign. Additionally, the forth image is blurred when zoomed in: the curves that depict children look similar to overlaped squares. This could confuse my CNN too.
 
 #### 2. Discuss the model's predictions on these new traffic signs and compare the results to predicting on the test set. At a minimum, discuss what the predictions were, the accuracy on these new predictions, and compare the accuracy to the accuracy on the test set (OPTIONAL: Discuss the results in more detail as described in the "Stand Out Suggestions" part of the rubric).
 
@@ -110,12 +109,12 @@ Here are the results of the prediction:
 |:---------------------:|:---------------------------------------------:| 
 | 20km/h (label 0)         		| 35   									| 
 | No entry (label 17)    			| 17 										|
-| Child crossing (label 28)		| 25											|
+| Children crossing (label 28)		| 25											|
 | Keep left (label 39) 	   		| 39					 				|
 | Curve left (label 19)			| 28      							|
 
 
-The model was able to correctly guess 2 of the 5 traffic signs, which gives an accuracy of 40%. The accuracy is lower than expected. The reason of the mis-prediction could result from extra lines in the background and the low quality of my pictures downloded from the web.
+The model was able to correctly guess 2 of the 5 traffic signs, which gives an accuracy of 40%. The accuracy is lower than expected. The reason of the mis-prediction could result from extra lines in the background and the low quality of my pictures downloded from the web. Particularly, the "children crossing" image appears to be blurred.
 
 
 

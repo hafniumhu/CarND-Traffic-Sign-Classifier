@@ -50,7 +50,7 @@ The x-axis shows the label on the traffic signs; the y-axis shows the number of 
 
 #### 1. Describe how you preprocessed the image data. What techniques were chosen and why did you choose these techniques? Consider including images showing the output of each preprocessing technique. Pre-processing refers to techniques such as converting to grayscale, normalization, etc. (OPTIONAL: As described in the "Stand Out Suggestions" part of the rubric, if you generated additional data for training, describe why you decided to generate additional data, how you generated the data, and provide example images of the additional data. Then describe the characteristics of the augmented training set like number of images in the set, number of images for each class, etc.)
 
-The images are normalized in the following way. The normalization ensures that the pixel values are between 0 and 1:
+The only preprocessing technique I used is normalization. The normalization ensures that the pixel values are between 0 and 1. Greyscaling is not used here since my model gives a relatively high prediction accuracy with the pictures having 3 color channels.
 - X_train = ((X_train - 127.5) / 127.5)
 - X_valid = ((X_valid - 127.5) / 127.5)
 - X_test = ((X_test - 127.5) / 127.5)
@@ -87,15 +87,19 @@ To train the model, I used:
 
 #### 4. Describe the approach taken for finding a solution and getting the validation set accuracy to be at least 0.93. Include in the discussion the results on the training, validation and test sets and where in the code these were calculated. Your approach may have been an iterative process, in which case, outline the steps you took to get to the final solution and why you chose those steps. Perhaps your solution involved an already well known implementation or architecture. In this case, discuss why you think the architecture is suitable for the current problem.
 
+My original accuracy was around 0.8 when I used 10 for epoches and 128 as my batch size. Then I increased the epoches to 25 and kept batch size the same. The accuracy increased, but still below 0.9. Therefore, I changed my batch size to 200 for reaching a desirable prediction accuracy listed below. Techniques to prevent overfitting such as droupout is not applied here, since overfitting is not presented in my testing results.
+
 My final model results were:
-* validation set accuracy = 0.929
-* test set accuracy of = 0.915
+* validation set accuracy = 0.932
+* test set accuracy of = 0.916
 
 ### Test a Model on New Images
 
 Here are five German traffic signs that I found on the web:
 
 ![][image1] ![][image2] ![][image3] ![][image4] ![][image5]
+
+
 
 
 #### 2. Discuss the model's predictions on these new traffic signs and compare the results to predicting on the test set. At a minimum, discuss what the predictions were, the accuracy on these new predictions, and compare the accuracy to the accuracy on the test set (OPTIONAL: Discuss the results in more detail as described in the "Stand Out Suggestions" part of the rubric).
